@@ -47,7 +47,7 @@ ghostwrite_email_tasks = []
 csv_file_path = r'C:\Users\Jess\source\repos\Sandbox\crewai-groq-tutorial\data\clients_small.csv'  # noqa: E501
 
 # Open the CSV file
-with open(csv_file_path, mode='r', newline='') as file:
+with open(csv_file_path, mode='r', encoding='utf-8', newline='') as file:
     # Create a CSV reader object
     csv_reader = csv.DictReader(file)
 
