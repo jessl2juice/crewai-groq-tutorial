@@ -13,8 +13,7 @@ class PersonalizeEmailTask():
                 - Last conversation: {recipient['last_conversation']}
 
                 Important Info to consider:
-                - When personalizing the email, only use one sentence from the bio or last conversation. 
-                    And make sure to incorporate it naturally into the email.  without going too much in to detail.
+                - When personalizing the email, only use one sentence from the bio or last conversation.And make sure to incorporate it naturally into the email.  without going too much in to detail.
                 - Make sure to keep the updated email roughly the same same length as the template email.
                 
                 The template email is as follows:
@@ -24,13 +23,13 @@ class PersonalizeEmailTask():
                 ```
             """,
             agent=agent,
-            expected_output=f"Personalized email draft.",
+            expected_output=r"Personalized email draft.",
             async_execution=True,
         )
 
     def ghostwrite_email(self, agent, draft_email, recipient):
         return Task(
-            description=f"""
+            description="""
                 Revise the draft email to adopt the following writing style.
 
                 Writing Style:
@@ -40,10 +39,10 @@ class PersonalizeEmailTask():
                 - The tone will be optimistic and encouraging, aiming to build rapport and motivate action, while staying grounded in practical advice.
 
                 Important Notes:
-                - Do not use emojis.
+                - Ensure that the revised email maintains the core message and intent of the original draft.
             """,
             agent=agent,
             context=[draft_email],
-            expected_output=f"A revised email draft in ghost writer's specified tone and style.",
-            output_file=f"output/{recipient['first_name']}_{recipient['last_name']}.txt",
+            expected_output="A revised email draft in ghost writer's specified tone and style.",
+            output_file=r"C:\Users\Jess\source\repos\Sandbox\crewai-groq-tutorial\{}_{}.txt".format(recipient['first_name'], recipient['last_name']),
         )

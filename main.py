@@ -1,8 +1,9 @@
-import os
+import os  # noqa: I001, F401
 import time
 import csv
 from crewai import Crew
-from langchain_groq import ChatGroq
+# from langchcain_groq import ChatGroq
+from langchain_groq.chat_models import ChatGroq  # noqa: F401
 from agents import EmailPersonalizationAgents
 from tasks import PersonalizeEmailTask
 
@@ -43,7 +44,7 @@ personalize_email_tasks = []
 ghostwrite_email_tasks = []
 
 # Path to the CSV file containing client information
-csv_file_path = 'data/clients_small.csv'
+csv_file_path = r'C:\Users\Jess\source\repos\Sandbox\crewai-groq-tutorial\data\clients_small.csv'  # noqa: E501
 
 # Open the CSV file
 with open(csv_file_path, mode='r', newline='') as file:
@@ -82,6 +83,7 @@ with open(csv_file_path, mode='r', newline='') as file:
 
 # Setup Crew
 crew = Crew(
+
     agents=[
         email_personalizer,
         ghostwriter
