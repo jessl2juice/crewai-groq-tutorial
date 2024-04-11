@@ -44,7 +44,7 @@ personalize_email_tasks = []
 ghostwrite_email_tasks = []
 
 # Path to the CSV file containing client information
-csv_file_path = r'C:\Users\Jess\source\repos\Sandbox\crewai-groq-tutorial\data\clients_large.csv' 
+csv_file_path = r'C:\Users\Jess\source\repos\Sandbox\crewai-groq-tutorial\data\clients_medium.csv'   # noqa: E501
 
 # Open the CSV file
 with open(csv_file_path, mode='r', encoding='utf-8', newline='') as file:
