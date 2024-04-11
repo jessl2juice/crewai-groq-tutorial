@@ -44,5 +44,5 @@ class PersonalizeEmailTask():
             agent=agent,
             context=[draft_email],
             expected_output="A revised email draft in ghost writer's specified tone and style.",
-            output_file=r"C:\Users\Jess\source\repos\Sandbox\crewai-groq-tutorial\{}_{}.txt".format(recipient['first_name'], recipient['last_name']),
+            output_file=r"C:\Users\Jess\source\repos\Sandbox\crewai-groq-tutorial\email_files\{}_{}.txt".format(recipient['first_name'], recipient['last_name']),
         )

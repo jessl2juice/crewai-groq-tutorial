@@ -7,3 +7,4 @@ output/
 .vs/crewai-groq-tutorial/FileContentIndex/af9b5185-eb52-4b38-b61f-b42e20d4959d.vsidx
 .gitignore
 .vs/crewai-groq-tutorial/FileContentIndex/955f5300-9c4b-4a32-95b1-c47b9bda3822.vsidx
+/email_files
